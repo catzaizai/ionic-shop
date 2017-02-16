@@ -1,0 +1,72 @@
+page-account {
+  .account-info{
+    background-color: $danger;
+    background-image: url("../../assets/card-sf.png");
+    height: 240px;
+    position: relative;
+  }
+  .avatar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img{
+      width: 100px;
+      height: 100px;
+      border-radius: 50px;
+      border: 3px solid #fff;
+    }
+    p.username{
+      color: #fff;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .manager{
+    position: absolute;
+    top: 0;
+    right: 0;
+    button{
+      font-size: 1.2rem;
+      color: #fff;
+      ion-icon{
+        margin: 0 3px;
+      }
+    }
+  }
+  .arrow-right{
+    background: none;   /*为了清除前面div设置的背景颜色*/
+    border: 10px solid #ffffff;
+    width: 0;
+    height: 0;
+    border-color: transparent transparent transparent #fff;
+    position: absolute;
+    left: -1px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .options{
+    margin: 10px 0;
+    border-top: 0.5px solid $light;
+    border-bottom: 0.5px solid $light;
+    box-shadow: 1px 1px 10px $light;
+    text-align: center;
+
+    ion-col{
+      border-right: 0.5px solid $light;
+      &:last-child{
+        border-right: none;
+        position: relative;
+        background: $light;
+      }
+    }
+    ion-icon{
+      font-size: 3rem;
+    }
+    p{
+      margin: 2px 0;
+      color: $grey;
+      font-size: 1.2rem;
+    }
+  }
+}

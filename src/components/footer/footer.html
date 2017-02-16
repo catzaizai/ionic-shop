@@ -1,0 +1,32 @@
+<ion-footer class="footer-nav">
+  <ion-toolbar>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col>
+          <div class="icon-button" [ngClass]="pageName == 'home'?'active':''" (click)="gotoPage('home')">
+            <ion-icon name="ios-home-outline"></ion-icon>
+            <p no-margin>商城</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="icon-button" [ngClass]="pageName == 'category'?'active':''" (click)="gotoPage('category')">
+            <ion-icon name="list"></ion-icon>
+            <p no-margin>分类</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="icon-button" [ngClass]="pageName == 'cart'?'active':''" (click)="gotoPage('cart')">
+            <ion-icon name="ios-cart-outline"></ion-icon>
+            <p no-margin>购物车</p>
+          </div>
+        </ion-col>
+        <ion-col>
+          <div class="icon-button" [ngClass]="pageName == 'account'?'active':''" (click)="gotoPage('account')">
+            <ion-icon name="ios-contact-outline"></ion-icon>
+            <p no-margin>我的</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>

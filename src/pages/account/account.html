@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      我的
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="account-info">
+    <div class="avatar">
+      <img [src]="user.avatar" alt="Avatar">
+      <p class="username">{{ user.nickname }}</p>
+    </div>
+    <div class="manager">
+      <button ion-button clear (click)="gotoUser()"><ion-icon name="settings"></ion-icon> 账户管理 <ion-icon name="arrow-forward"></ion-icon></button>
+    </div>
+  </div>
+  <div class="options">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col (click)="gotoOrder()">
+          <ion-icon name="card"></ion-icon>
+          <p>待付款</p>
+        </ion-col>
+        <ion-col (click)="gotoOrder()">
+          <ion-icon name="plane"></ion-icon>
+          <p>待收货</p>
+        </ion-col>
+        <ion-col (click)="gotoOrder()">
+          <ion-icon name="ios-chatboxes-outline"></ion-icon>
+          <p>待评价</p>
+        </ion-col>
+        <ion-col (click)="gotoOrder()">
+          <ion-icon name="ios-clipboard-outline"></ion-icon>
+          <p>全部订单 &gt; </p>
+          <div class="arrow-right"></div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<footer [pageName]="'account'"></footer>

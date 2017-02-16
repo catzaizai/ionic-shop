@@ -1,0 +1,133 @@
+<ion-content>
+  <div class="header">
+    <ion-toolbar>
+      <ion-buttons start>
+        <button ion-button>
+          Logo
+        </button>
+      </ion-buttons>
+      <ion-searchbar></ion-searchbar>
+      <ion-buttons end>
+        <button ion-button>
+          登录
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+  <div class="top-slide">
+    <ion-slides [autoplay]="5000" [pager]="true" [paginationType]="'bullets'" [loop]="true">
+      <ion-slide>
+        <img src="../../assets/1.jpg" alt="1">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/2.jpg" alt="2">
+      </ion-slide>
+      <ion-slide>
+        <img src="../../assets/3.jpg" alt="3">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="ad-list">
+    <div class="mega">
+      <ion-icon name="megaphone" color="danger"></ion-icon>
+    </div>
+    <div class="list">
+      <ion-slides [autoplay]="3000" [direction]="'vertical'" [loop]="true">
+        <ion-slide>
+          <p>喜讯--本app正式上线，哇咔咔咔咔咔</p>
+        </ion-slide>
+        <ion-slide>
+          <p>Slide 2</p>
+        </ion-slide>
+        <ion-slide>
+          <p>Slide 3</p>
+        </ion-slide>
+      </ion-slides>
+    </div>
+  </div>
+  <div class="recommend-title">
+    <ion-icon name="basket"></ion-icon>
+    <p>热卖产品</p>
+  </div>
+  <ion-scroll scrollX="true" class="recommend-list">
+    <ion-row>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+      <ion-col width-25>
+        <img src="../../assets/product.jpg" alt="pro">
+        <p>￥112.00</p>
+      </ion-col>
+    </ion-row>
+  </ion-scroll>
+  <div class="tags-area">
+    <div class="tag-area color-1">
+      <h2><a href="#">运动馆</a></h2>
+      <a class="max" href="#"><img src="../../assets/4.jpg" width="120" height="140"></a>
+      <div class="tags">
+        <p>
+          <a href="#" class="active">耐克</a>
+          <a href="#">阿迪达斯</a>
+          <a href="#">安踏</a>
+          <a href="#" class="active">鸿星尔克</a>
+          <a href="#">网球鞋</a>
+          <a href="#" class="active">篮球鞋</a>
+          <a href="#">帆布鞋</a>
+          <a href="#" class="more">更多<del><i class="arrow-right"></i></del></a>
+        </p>
+      </div>
+    </div>
+    <div class="tag-area color-2">
+      <div class="tags">
+        <p>
+          <a href="#" class="active">耐克</a>
+          <a href="#">阿迪达斯</a>
+          <a href="#">安踏</a>
+          <a href="#" class="active">鸿星尔克</a>
+          <a href="#">网球鞋</a>
+          <a href="#" class="active">篮球鞋</a>
+          <a href="#">帆布鞋</a>
+          <a href="#" class="more">更多<del><i class="arrow-right"></i></del></a>
+        </p>
+      </div>
+      <a class="max" href="#"><img src="../../assets/4.jpg" width="120" height="140"></a>
+      <h2><a href="#">运动馆</a></h2>
+    </div>
+  </div>
+<div class="has-footer"><br /> </div>
+</ion-content>
+<footer [pageName]="'home'"></footer>
+

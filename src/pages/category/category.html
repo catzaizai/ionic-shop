@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>分类</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid no-padding class="category-list">
+  <ion-row>
+    <ion-col no-padding width-33>
+      <ion-scroll scrollY="true">
+        <ion-list>
+          <ion-item no-padding *ngFor="let category of categoryList">
+            <p>
+              {{ category.name }}
+            </p>
+          </ion-item>
+        </ion-list>
+      </ion-scroll>
+    </ion-col>
+    <ion-col class="product-list">
+      <ion-scroll scrollY="true">
+        <div class="product-item" width-34 no-padding *ngFor="let product of productList">
+          <ion-card>
+            <img [src]="product.img" alt="">
+            <ion-item>
+              <h2>{{product.title}}</h2>
+              <p>{{product.subtitle}}</p>
+            </ion-item>
+            <ion-item>
+              <span item-left class="price">￥{{ product.price }}</span>
+              <span item-right>已售：{{ product.sale }}</span>
+            </ion-item>
+          </ion-card>
+
+        </div>
+      </ion-scroll>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+<footer [pageName]="'category'"></footer>

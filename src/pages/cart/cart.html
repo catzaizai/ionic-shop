@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>购物车</ion-title>
+    <ion-buttons end>
+      <button class="edit" ion-button clear (click)="editClick()">
+        {{ isEdit ? '完成': '编辑' }}
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-grid class="cart-list" no-padding>
+    <ion-row class="cart-item" *ngFor="let product of productList">
+      <ion-col class="checkbox" no-padding width-10>
+        <ion-icon (click)="checkClick(product)" [name]="product.checked ? 'checkmark-circle' : 'radio-button-off'"></ion-icon>
+      </ion-col>
+      <ion-col class="img" no-padding width-33>
+        <img [src]="product.img" [alt]="product.title" />
+      </ion-col>
+      <ion-col class="info" no-padding>
+        <h4>{{ product.title+ ' - ' + product.subtitle }}</h4>
+        <p class="attr"><span *ngFor="let attr of product.attributes">{{ attr }}</span></p>
+        <div class="price">
+          <p>￥ <span>{{ product.price }}</span></p>
+          <pricer class="num" [(num)]="product.count" (numChange)="calculateTotalAmount()"></pricer>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="productList?.length == 0">
+      <ion-col>
+        <div class="empty">
+          <p>购物车为空 ~~</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="total">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col class="checkbox" width-10>
+          <ion-icon (click)="checkAllClick()" [name]="allChecked ? 'checkmark-circle' : 'radio-button-off'"></ion-icon>
+        </ion-col>
+        <ion-col width-20>
+          <span>{{ allChecked ? '全不选': '全选' }}</span>
+        </ion-col>
+        <ion-col>
+          <p *ngIf="!isEdit">￥ <span class="price">{{ totalAmount.toFixed(2) }}</span></p>
+        </ion-col>
+        <ion-col width-25 *ngIf="!isEdit">
+          <button>去结算({{ totalCount }})</button>
+        </ion-col>
+        <ion-col width-25 *ngIf="isEdit">
+          <button (click)="deleteClick()" class="delete">删除</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<footer [pageName]="'cart'"></footer>

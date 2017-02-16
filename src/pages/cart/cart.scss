@@ -1,0 +1,104 @@
+page-cart {
+  p{
+    margin: 0;
+  }
+  .edit{
+    font-size: 1.3rem;
+  }
+  .cart-list{
+    margin-bottom: 100px;
+  }
+  .checkbox{
+    position: relative;
+    ion-icon{
+      position: absolute;
+      font-size: 2.4rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .cart-item{
+    border-bottom: 1px solid $light;
+    height: 100px;
+    h4{
+      font-size: 1.8rem;
+      margin: 8px 0;
+    }
+    .img{
+      padding: 5px;
+    }
+    img{
+      border: 0.5px solid #f6f6f6;
+      width: 90px;
+      height: 90px;
+    }
+    .info{
+      position: relative;
+    }
+    .attr{
+      span{
+        border-radius: 3px;
+        border: 0.5px solid $grey;
+        color: $grey;
+        font-size: 0.6rem;
+        padding: 2px;
+      }
+    }
+    .price{
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      right: 1rem;
+      p{
+        display: inline-block;
+        font-size: 1rem;
+      }
+      span{
+        color: $danger;
+        font-size: 2rem;
+      }
+    }
+    .num{
+      position: absolute;
+      right: 0;
+      bottom: 3px;
+    }
+  }
+
+  $height: 40px;
+  .total{
+    position: fixed;
+    bottom: 44px;
+    left: 0;
+    right: 0;
+    background: $light;
+    box-shadow: 1px 1px 5px $grey;
+    border-top: 0.5px solid $light-grey;
+    height: $height;
+    span{
+      line-height: $height;
+    }
+    button{
+      line-height: $height;
+      width: 100%;
+      margin: 0;
+      background: $danger;
+      color: #fff;
+    }
+    ion-col{
+      height: $height;
+      padding: 0;
+    }
+    span.price{
+      font-size: 2.0rem;
+      color:$danger;
+    }
+  }
+  .empty{
+    p{
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+}

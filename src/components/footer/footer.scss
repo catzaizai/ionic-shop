@@ -1,0 +1,21 @@
+footer {
+  ion-col{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+  }
+  .icon-button{
+    width: 60px;
+    margin: auto;
+    ion-icon{
+      font-size: 2rem;
+    }
+    p{
+      font-size: 11px;
+    }
+    &.active{
+      color: $danger;
+    }
+  }
+}

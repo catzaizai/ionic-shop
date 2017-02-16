@@ -1,0 +1,167 @@
+page-home {
+  a{
+    text-decoration: none;
+  }
+  .header{
+    opacity: 0.8;
+    position: absolute;
+    background: #fff;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    min-height: 35px;
+    button{
+      font-size: 1.2rem;
+    }
+    .searchbar-input{
+      font-size: 1.2rem;
+      height: 2.2rem;
+    }
+    .toolbar-ios{
+      height: auto;
+      min-height: 35px;
+    }
+    .searchbar-ios{
+      min-height: 35px;
+    }
+  }
+  .recommend-title{
+    margin-top: 10px;
+    padding: 0 12px;
+    ion-icon{
+      font-size: 2rem;
+      margin-right: 10px;
+      color: $danger;
+    }
+    p{
+      display: inline-block;
+      margin: 0;
+      color: $color-1;
+    };
+  }
+  .recommend-list{
+    height: 100px;
+    ion-row{
+      ion-col{
+        border-right: 1px solid #f4f4f4;
+      }
+    }
+    p{
+      margin: 0;
+      text-align: center;
+      font-size: 1rem;
+      color: $danger;
+    }
+  }
+  .has-footer{
+    height: 60px;
+  }
+  .top-slide{
+    height: 200px;
+  }
+  .ad-list{
+    margin: 6px 6px 0 6px;
+    padding: 0 12px 0 12px;
+    background: #eaeaea;
+    border-radius: 5px;
+    position: relative;
+    .mega{
+      font-size: 2rem;
+      padding-right: 10px;
+      position: absolute;
+      top: 3px;
+    }
+    .list{
+      position: relative;
+      display: inline-block;
+      height: 30px;
+      margin-left: 30px;
+      p{
+        font-size: 0.8rem;
+        margin: 0;
+        text-align: left;
+      }
+    }
+  }
+
+  .tags-area{
+    margin: 10px 5px 0;
+    .tag-area{
+      margin-top: 10px;
+      background: #fff;
+      border-bottom: 2px solid #b5bfd7;
+      overflow: hidden;
+      h2{
+        width: 38px;
+        float: left;
+        display: inline;
+        background: #ff8080;
+        text-align: center;
+        color: #fff;
+        font-weight: normal;
+        padding: 38px 0;
+        font-size: 20px;
+        margin: 0;
+        a{
+          color: #fff;
+        }
+      }
+      a.max{
+        float: left;
+        width: 120px;
+        height: 140px;
+        border: 0;
+        color: #fff;
+      }
+      img{
+        display: block;
+        width: 120px;
+        height: 140px;
+        border: 0;
+      }
+      .tags{
+        float: left;
+        display: inline;
+        width: 100%;
+        margin-right: -158px;
+        p{
+          overflow: hidden;
+          margin: 0;
+          line-height: 28px;
+          list-style: none;
+          margin-right: 170px;
+          a{
+            float: left;
+            padding: 0 10px;
+            line-height: 28px;
+            border: 1px solid #dadada;
+            margin-top: 7px;
+            margin-right: 3px;
+            font-size: 12px;
+            color: #919191;
+          }
+        }
+      }
+      $i:1;
+      @each $color in $color-1, $color-2, $color-3, $color-4, $color-5, $color-6 {
+        &.color-#{$i}{
+          h2{
+            background-color: $color;
+          }
+          .tags{
+            p{
+              a.active{
+                background-color: $color;
+                color:#FFFFFF;
+                border: 1px solid $color;
+              }
+            }
+          }
+        }
+        $i: $i+1;
+      }
+    }
+  }
+
+}
