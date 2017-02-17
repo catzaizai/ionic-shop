@@ -1,20 +1,20 @@
 import {Component} from '@angular/core';
 
 import {NavController} from 'ionic-angular';
-import {UserPage} from "../user/user";
+import {ManagerPage} from "../manager/manager";
 import {OrderPage} from "../order/order";
 
 
 @Component({
-  selector: 'page-account',
-  templateUrl: 'account.html'
+  selector: 'page-me',
+  templateUrl: 'me.html'
 })
-export class AccountPage {
+export class MePage {
 
   user: any;
 
   gotoUser() {
-    this.navCtrl.push(UserPage);
+    this.navCtrl.push(ManagerPage);
   }
 
   gotoOrder(){

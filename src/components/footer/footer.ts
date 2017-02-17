@@ -3,7 +3,7 @@ import {NavController} from 'ionic-angular';
 import {CategoryPage} from "../../pages/category/category";
 import {HomePage} from "../../pages/home/home";
 import {CartPage} from "../../pages/cart/cart";
-import {AccountPage} from "../../pages/account/account";
+import {MePage} from "../../pages/me/me";
 import {Input} from "@angular/core/src/metadata/directives";
 
 /*
@@ -20,6 +20,7 @@ export class FooterComponent {
   @Input()
   pageName: string;
   gotoPage(pageName){
+    if(this.pageName == pageName){ return; }
     switch (pageName){
       case 'home':
         this.navCtrl.push(HomePage);
@@ -30,13 +31,12 @@ export class FooterComponent {
       case 'cart':
         this.navCtrl.push(CartPage);
             break;
-      case 'account':
-        this.navCtrl.push(AccountPage);
+      case 'me':
+        this.navCtrl.push(MePage);
             break;
     }
   }
   constructor(public navCtrl: NavController) {
-    console.log(this.pageName);
   }
 
 }

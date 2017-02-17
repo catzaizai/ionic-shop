@@ -1,0 +1,53 @@
+<ion-content>
+  <div class="bg" (click)="dismiss()"></div>
+  <div class="modal">
+    <div class="title">
+      <ion-grid>
+        <ion-row>
+          <ion-col width-25>
+            <img [src]="productAttach.src[0]" alt="">
+          </ion-col>
+          <ion-col>
+            <h2> {{ productAttach.title }} </h2>
+            <p class="price">￥<span>{{productAttach.price}}</span>元</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-icon (click)="dismiss()" class="close" name="close" large></ion-icon>
+    </div>
+    <ion-scroll scrollY="true">
+      <div class="attr-list">
+        <div class="attr" *ngFor="let attr of attrs">
+          <h3>{{attr.name}}</h3>
+          <p><span *ngFor="let a of attr.attr">{{a.value}}</span></p>
+        </div>
+      </div>
+      <div class="num">
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col>
+              <h3>数量：</h3>
+            </ion-col>
+            <ion-col>
+              <pricer [num]="productAttach.count"></pricer>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-scroll>
+    <div class="tools">
+      <ion-grid no-padding>
+        <ion-row>
+          <ion-col class="add-cart">
+            <button>加入购物车</button>
+          </ion-col>
+          <ion-col class="buy">
+            <button>立即购买</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+</ion-content>
+

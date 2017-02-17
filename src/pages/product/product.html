@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-navbar>
+    <ion-segment [(ngModel)]="segment" color="danger">
+      <ion-segment-button value="product">
+        商品
+      </ion-segment-button>
+      <ion-segment-button value="detail">
+        详情
+      </ion-segment-button>
+      <ion-segment-button value="comment">
+        评价
+      </ion-segment-button>
+    </ion-segment>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="container" [ngSwitch]="segment">
+    <div class="product" *ngSwitchCase="'product'">
+      <div class="top-slide">
+        <ion-slides [pager]="true" [paginationType]="'bullets'">
+          <ion-slide *ngFor="let img of productInfo.src">
+            <img [src]="img" alt="1">
+          </ion-slide>
+        </ion-slides>
+      </div>
+      <div class="product-info">
+        <h2 class="title">{{ productInfo.title }}</h2>
+        <p class="summary">{{ productInfo.summary }}</p>
+        <p class="price">￥ <span>{{ productInfo.price }}</span> 元</p>
+      </div>
+      <div class="attrs">
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col no-padding (click)="showAttrModal()">
+              <p>已选：<span>白色</span> <span>一对</span></p>
+            </ion-col>
+            <ion-col width-10>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div *ngSwitchCase="'detail'">
+      <h2>规格参数</h2>
+      <p>参数</p>
+      <hr />
+      <h2>商品介绍</h2>
+      <p>介绍</p>
+    </div>
+    <div *ngSwitchCase="'comment'">
+      <p>评论</p>
+    </div>
+  </div>
+  <div class="tools">
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col class="collect">
+          <ion-icon name="star-outline"></ion-icon>
+          <p>收藏</p>
+        </ion-col>
+        <ion-col class="collect">
+          <ion-icon name="cart-outline"></ion-icon>
+          <p>购物车</p>
+        </ion-col>
+        <ion-col class="add-cart" width-33>
+          <button>加入购物车</button>
+        </ion-col>
+        <ion-col class="buy" width-33>
+          <button>立即购买</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

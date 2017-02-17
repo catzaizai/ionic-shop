@@ -1,0 +1,147 @@
+attr-modal {
+  ion-content{
+    background: transparent !important;
+  }
+
+  ion-col{
+    padding: 0;
+  }
+
+  .bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.6;
+    background: $grey;
+  }
+  .modal{
+    position: absolute;
+    background: #fff;
+    height: 350px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 0.5px solid #999;
+    box-shadow: 1px 1px 10px #666;
+    ion-scroll{
+      height: 220px;
+    }
+    .title{
+      height: 80px;
+      position: relative;
+      .close{
+        position: absolute;
+        right: 5px;
+        width: 25px;
+        height: 25px;
+        top:5px;
+        font-size: 2rem;
+        border: 1px solid $danger;
+        color: $danger;
+        border-radius: 25px;
+        padding: 2px 8px;
+      }
+      ion-col{
+        position: relative;
+      }
+      img{
+        position: absolute;
+        top: -20px;
+        border: 1px solid $light;
+        border-radius: 3px;
+      }
+      h2{
+        font-size: 1.4rem;
+        padding: 0;
+        margin: 5px;
+      }
+      p{
+        margin: 5px;
+        &.summary{
+          color: $danger;
+          font-size: 1rem;
+        }
+        &.price{
+          span{
+            font-size: 2.4rem;
+            color: $danger;
+            margin: 0 5px;
+          }
+        }
+      }
+    }
+
+    .attr-list{
+      padding: 0 5px;
+      border-top: 1px solid $light;
+      .attr{
+        margin-bottom: 10px;
+      }
+      h3{
+        font-size: 1.6rem;
+        margin: 5px 0;
+      }
+      p{
+        margin: 0;
+        span{
+          border: 1px solid $grey;
+          border-radius: 3px;
+          padding: 3px;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    .num{
+      margin: 10px;
+      padding: 10px 0;
+      border-top: 1px solid $light;
+      border-bottom: 1px solid $light;
+      h3{
+        float: left;
+        margin: 0;
+        font-size: 1.6rem;
+      }
+      pricer{
+        float: right;
+      }
+    }
+  }
+
+  .tools{
+    height: 45px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 0.5px solid $light;
+    box-shadow: 1px 1px 5px $light;
+    ion-col{
+      height: 45px;
+    }
+    @mixin button{
+      button{
+        width: 100%;
+        color: #fff;
+        height: 100%;
+      }
+
+    }
+    .add-cart{
+      padding: 0;
+      @include button;
+      button{
+        background: $color-1;
+      }
+    }
+    .buy{
+      padding: 0;
+      @include button;
+      button{
+        background: $danger;
+      }
+    }
+  }
+}

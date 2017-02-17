@@ -1,4 +1,4 @@
-page-account {
+page-me {
   .account-info{
     background-color: $danger;
     background-image: url("../../assets/card-sf.png");
@@ -67,6 +67,23 @@ page-account {
       margin: 2px 0;
       color: $grey;
       font-size: 1.2rem;
+    }
+  }
+
+  .login-out{
+    position: absolute;
+    bottom: 55px;
+    left: 20px;
+    right: 20px;
+    border-top: 0.5px solid $light;
+    border-bottom: 0.5px solid $light;
+    box-shadow: 1px 1px 10px $light;
+    text-align: center;
+    background: $danger;
+    color: #fff;
+    p{
+      text-align: center;
+      margin: 10px 0;
     }
   }
 }

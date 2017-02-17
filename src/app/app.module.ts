@@ -1,7 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AccountPage } from '../pages/account/account';
+import { MePage } from '../pages/me/me';
 import { CategoryPage } from '../pages/category/category';
 import { HomePage } from '../pages/home/home';
 import { LoginPage} from '../pages/login/login';
@@ -10,42 +10,55 @@ import { FooterComponent } from '../components/footer/footer';
 import { CartPage } from "../pages/cart/cart";
 import {PricerComponent} from "../components/pricer/pricer";
 import {FormsModule} from "@angular/forms";
-import {UserPage} from "../pages/user/user";
+import {ManagerPage} from "../pages/manager/manager";
 import {AddressPage} from "../pages/address/address";
-import {DetailPage} from "../pages/detail/detail";
+import {ProductPage} from "../pages/product/product";
 import {OrderPage} from "../pages/order/order";
+import {UserInfoPage} from "../pages/user-info/user-info";
+import {ChangePasswordPage} from "../pages/change-password/change-password";
+import {SystemPage} from "../pages/system/system";
+import {PopOverComponent} from "../components/pop-over/pop-over";
+import {AttrModalComponent} from "../components/attr-modal/attr-modal";
 
 
 @NgModule({
   declarations: [
     MyApp,
-    AccountPage,
+    MePage,
     CategoryPage,
     HomePage,
     LoginPage,
     CartPage,
-    UserPage,
+    ManagerPage,
     AddressPage,
-    DetailPage,
+    ProductPage,
     OrderPage,
+    UserInfoPage,
+    ChangePasswordPage,
+    SystemPage,
     HeaderComponent,
     FooterComponent,
-    PricerComponent
+    PricerComponent,
+    PopOverComponent,
+    AttrModalComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
-      backButtonText: '返回'
+      backButtonText: ''
     }, {
       links: [
         { component: HomePage, name: 'home', segment: 'home' },
         { component: CategoryPage, name: 'category', segment: 'category' },
         { component: CartPage, name: 'cart', segment: 'cart' },
-        { component: AccountPage, name: 'account', segment: 'account' },
-        { component: UserPage, name: 'user', segment: 'user' },
+        { component: MePage, name: 'me', segment: 'me' },
+        { component: ManagerPage, name: 'manager', segment: 'manager' },
         { component: AddressPage, name: 'address', segment: 'address' },
-        { component: DetailPage, name: 'detail', segment: 'detail' },
+        { component: ProductPage, name: 'product', segment: 'product' },
         { component: OrderPage, name: 'order', segment: 'order' },
-        { component: LoginPage, name: 'login', segment: 'login' }
+        { component: LoginPage, name: 'login', segment: 'login' },
+        { component: UserInfoPage, name: 'userInfo', segment: 'userInfo' },
+        { component: ChangePasswordPage, name: 'changePassword', segment: 'changePassword' },
+        { component: SystemPage, name: 'system', segment: 'system' }
       ]
     }),
     FormsModule
@@ -53,18 +66,23 @@ import {OrderPage} from "../pages/order/order";
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AccountPage,
+    MePage,
     CategoryPage,
     HomePage,
     LoginPage,
     CartPage,
-    UserPage,
+    ManagerPage,
     AddressPage,
-    DetailPage,
+    ProductPage,
     OrderPage,
+    UserInfoPage,
+    ChangePasswordPage,
+    SystemPage,
     HeaderComponent,
     FooterComponent,
-    PricerComponent
+    PricerComponent,
+    PopOverComponent,
+    AttrModalComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

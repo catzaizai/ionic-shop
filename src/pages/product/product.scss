@@ -1,0 +1,97 @@
+page-product {
+  .toolbar-ios .segment-ios {
+    width: auto;
+    left: 40px;
+    right: 40px;
+  }
+
+  .top-slide {
+    height: 200px;
+  }
+
+  .product-info {
+    padding: 0 10px;
+    border-bottom: 0.5px solid $light;
+    box-shadow: 1px 1px 5px $light;
+    h2.title {
+      margin: 5px 0;
+      font-size: 1.8rem;
+    }
+    p.summary {
+      color: $danger;
+      font-size: 1.4rem;
+    }
+    .price {
+      span {
+        font-size: 2.4rem;
+        color: $danger;
+      }
+    }
+  }
+
+  .attrs {
+    margin: 10px 0;
+    padding: 8px 10px;
+    border-top: 0.5px solid $light;
+    border-bottom: 0.5px solid $light;
+    box-shadow: 1px 1px 5px $light;
+    p {
+      margin: 0;
+      padding: 3px 0;
+    }
+    ion-icon {
+      float: right;
+    }
+  }
+
+  .container{
+    margin-bottom: 45px;
+  }
+
+  .tools{
+    height: 45px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 0.5px solid $light;
+    box-shadow: 1px 1px 5px $light;
+    ion-col{
+      height: 45px;
+    }
+    .collect{
+      text-align: center;
+      padding: 0;
+      ion-icon{
+        font-size: 2.4rem;
+        color: $danger;
+      }
+      p{
+        margin: 0;
+        font-size: 0.8rem;
+      }
+    }
+    @mixin button{
+      button{
+        width: 100%;
+        color: #fff;
+        height: 100%;
+      }
+
+    }
+    .add-cart{
+      padding: 0;
+      @include button;
+      button{
+        background: $color-1;
+      }
+    }
+    .buy{
+      padding: 0;
+      @include button;
+      button{
+        background: $danger;
+      }
+    }
+  }
+}

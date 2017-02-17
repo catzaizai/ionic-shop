@@ -11,19 +11,10 @@ page-home {
     right: 0;
     z-index: 2;
     min-height: 35px;
-    button{
-      font-size: 1.2rem;
-    }
-    .searchbar-input{
-      font-size: 1.2rem;
-      height: 2.2rem;
-    }
-    .toolbar-ios{
-      height: auto;
-      min-height: 35px;
-    }
-    .searchbar-ios{
-      min-height: 35px;
+    .searchbar-search-icon{
+      background-size: 16px;
+      height: 16px;
+      width: 16px;
     }
   }
   .recommend-title{

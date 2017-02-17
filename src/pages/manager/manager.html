@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>用户管理</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item (click)="gotoAddress()">
+      收货地址管理
+    </button>
+    <button ion-item (click)="gotoUserInfo()">
+      个人资料
+    </button>
+    <button ion-item (click)="gotoChangePassword()">
+      修改密码
+    </button>
+    <button ion-item (click)="gotoSystem()">
+      系统设置
+    </button>
+  </ion-list>
+  <div class="logout" (click)="logOut()">
+    <p>退出登陆</p>
+  </div>
+</ion-content>

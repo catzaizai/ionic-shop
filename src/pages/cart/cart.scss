@@ -67,6 +67,7 @@ page-cart {
   }
 
   $height: 40px;
+
   .total{
     position: fixed;
     bottom: 44px;
@@ -95,6 +96,7 @@ page-cart {
       color:$danger;
     }
   }
+
   .empty{
     p{
       text-align: center;

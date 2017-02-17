@@ -51,45 +51,9 @@
   </div>
   <ion-scroll scrollX="true" class="recommend-list">
     <ion-row>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
-      </ion-col>
-      <ion-col width-25>
-        <img src="../../assets/product.jpg" alt="pro">
-        <p>￥112.00</p>
+      <ion-col width-25 *ngFor="let product of hotProducts" (click)="gotoProduct()">
+        <img [src]="product.img" alt="pro">
+        <p>￥{{ product.price }}</p>
       </ion-col>
     </ion-row>
   </ion-scroll>
