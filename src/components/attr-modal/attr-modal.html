@@ -9,7 +9,8 @@
           </ion-col>
           <ion-col>
             <h2> {{ productAttach.title }} </h2>
-            <p class="price">￥<span>{{productAttach.price}}</span>元</p>
+            <p class="price">￥<span>{{ selecteSku? selecteSku.price : productAttach.price}}</span>元</p>
+            <p *ngIf="selecteSku">{{ selecteSku.info }}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -19,7 +20,9 @@
       <div class="attr-list">
         <div class="attr" *ngFor="let attr of attrs">
           <h3>{{attr.name}}</h3>
-          <p><span *ngFor="let a of attr.attr">{{a.value}}</span></p>
+          <p><span [class]="selectedAttr[attr.code] == value.code ? 'active':''"
+                   (click)="attrClick(attr.code, value.code)"
+                   *ngFor="let value of attr.attr">{{value.value}}</span></p>
         </div>
       </div>
       <div class="num">
@@ -48,6 +51,5 @@
       </ion-grid>
     </div>
   </div>
-
 </ion-content>
 

@@ -2,6 +2,14 @@ a{
   text-decoration: none;
 }
 
+.pull-right{
+  float: right;
+}
+
+.pull-left{
+  float: left;
+}
+
 $primary:    #387ef5;
 $secondary:  #32db64;
 $danger:     #f53d3d;

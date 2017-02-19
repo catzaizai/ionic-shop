@@ -3,10 +3,44 @@
   <ion-navbar>
     <ion-title>订单列表</ion-title>
   </ion-navbar>
-
+  <ion-toolbar class="order-ctrl">
+    <ion-segment [(ngModel)]="orderType">
+      <ion-segment-button value="paddingPay">待付款</ion-segment-button>
+      <ion-segment-button value="paddingReceived">待收货</ion-segment-button>
+      <ion-segment-button value="paddingComment">待评价</ion-segment-button>
+      <ion-segment-button value="all">全部</ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
+  <div>
+    <ion-grid class="order" *ngFor="let order of orderList">
+      <ion-row class="order-title">
 
+        <ion-col>
+          <p>{{ order.createDate | date: 'yyyy/MM/dd' }}</p>
+        </ion-col>
+        <ion-col>
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-col>
+      </ion-row>
+      <ion-scroll scrollX="true">
+        <ion-row class="order-img-list">
+          <ion-col width-20 no-padding *ngFor="let img of order.productImgList">
+            <img [src]="img" alt="">
+          </ion-col>
+        </ion-row>
+      </ion-scroll>
+      <ion-row class="order-info">
+        <ion-col>
+          <p>共 {{order.productImgList.length}} 件商品，实付款 <span>{{order.totalAmount}}</span> 元</p>
+        </ion-col>
+      </ion-row>
+      <ion-row class="order-tools">
+        <ion-col>
+          <p><button>付款</button><button>确认收货</button><button>评价</button><button class="normal">再次购买</button></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

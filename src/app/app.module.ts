@@ -19,6 +19,7 @@ import {ChangePasswordPage} from "../pages/change-password/change-password";
 import {SystemPage} from "../pages/system/system";
 import {PopOverComponent} from "../components/pop-over/pop-over";
 import {AttrModalComponent} from "../components/attr-modal/attr-modal";
+import {StarBarComponent} from "../components/star-bar/star-bar";
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import {AttrModalComponent} from "../components/attr-modal/attr-modal";
     FooterComponent,
     PricerComponent,
     PopOverComponent,
-    AttrModalComponent
+    AttrModalComponent,
+    StarBarComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -82,7 +84,8 @@ import {AttrModalComponent} from "../components/attr-modal/attr-modal";
     FooterComponent,
     PricerComponent,
     PopOverComponent,
-    AttrModalComponent
+    AttrModalComponent,
+    StarBarComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })

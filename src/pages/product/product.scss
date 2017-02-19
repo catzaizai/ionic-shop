@@ -56,6 +56,7 @@ page-product {
     right: 0;
     border-top: 0.5px solid $light;
     box-shadow: 1px 1px 5px $light;
+    background: #fff;
     ion-col{
       height: 45px;
     }
@@ -91,6 +92,60 @@ page-product {
       @include button;
       button{
         background: $danger;
+      }
+    }
+  }
+
+  .comment{
+    padding: 0;
+    margin: 10px 0;
+    box-shadow: 1px 1px 5px $grey;
+    p{
+      margin: 0;
+      padding: 5px 0;
+    }
+    ion-col{
+      padding: 0 10px;
+    }
+    .user-name{
+
+    }
+    .date{
+      color: $grey;
+      float: right;
+    }
+    .comment-title{
+      border-bottom: 1px solid $light;
+    }
+    .comment-content{
+      p{
+        font-size: 1rem;
+      }
+    }
+
+    .comment-footer{
+      border-top: 1px solid $light;
+      p{
+        font-size: 0.8rem;
+        color: $grey;
+        span{
+          border: 1px solid $grey;
+          padding: 2px;
+          font-size: 0.6rem;
+          border-radius: 3px;
+        }
+      }
+      .favorite{
+        float: right;
+        margin: 5px 0;
+        ion-icon{
+          color: $danger;
+          line-height: 1.6rem;
+        }
+        span{
+          font-size: 0.8rem;
+          line-height: 1.6rem;
+        }
       }
     }
   }

@@ -1,0 +1,15 @@
+page-login{
+  .login{
+    margin: 10px 0;
+    padding: 0 10px;
+    border: none;
+    box-shadow: 1px 1px 5px $light;
+    ion-item{
+      border: none !important;
+    }
+    ion-icon{
+      position: absolute;
+      right: 0;
+    }
+  }
+}

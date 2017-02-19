@@ -25,7 +25,7 @@ export class HomePage {
     }
   }
 
-  openPage() {
+  gotoLogin() {
     this.navCtrl.push(LoginPage);
   }
 

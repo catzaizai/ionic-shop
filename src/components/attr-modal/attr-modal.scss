@@ -29,7 +29,7 @@ attr-modal {
       height: 220px;
     }
     .title{
-      height: 80px;
+      height: 90px;
       position: relative;
       .close{
         position: absolute;
@@ -90,6 +90,10 @@ attr-modal {
           border-radius: 3px;
           padding: 3px;
           margin-right: 5px;
+          &.active{
+            border-color: $danger;
+            color: $danger;
+          }
         }
       }
     }

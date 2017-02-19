@@ -1,18 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>用户登陆</ion-title>
+    <ion-title> 登陆</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item>
-      <ion-label>用户名：</ion-label>
-      <ion-input type="text"></ion-input>
+  <ion-list class="login">
+    <ion-item no-padding>
+      <ion-label floating>手机号</ion-label>
+      <ion-input type="text" [(ngModel)]="userName"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-label>密码：</ion-label>
-      <ion-input type="password"></ion-input>
+
+    <ion-item no-padding>
+      <ion-label floating>密码</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
     </ion-item>
+
   </ion-list>
+  <div padding>
+    <button ion-button block color="danger" (click)="loginClick()">登录</button>
+  </div>
 </ion-content>

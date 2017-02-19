@@ -34,13 +34,23 @@
       <div class="product-info">
         <h2 class="title">{{ productInfo.title }}</h2>
         <p class="summary">{{ productInfo.summary }}</p>
-        <p class="price">￥ <span>{{ productInfo.price }}</span> 元</p>
+        <ion-grid no-padding>
+          <ion-row>
+            <ion-col no-padding>
+              <p class="price">￥ <span>{{ productInfo.price }}</span> 元</p>
+            </ion-col>
+            <ion-col>
+              <star-bar [setScore]="productInfo.score"></star-bar>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
       </div>
       <div class="attrs">
         <ion-grid no-padding>
           <ion-row>
             <ion-col no-padding (click)="showAttrModal()">
-              <p>已选：<span>白色</span> <span>一对</span></p>
+              <p>已选：{{ sku ? sku.info :  '请选择商品类型' }}</p>
             </ion-col>
             <ion-col width-10>
               <ion-icon name="arrow-forward"></ion-icon>
@@ -52,22 +62,55 @@
     <div *ngSwitchCase="'detail'">
       <h2>规格参数</h2>
       <p>参数</p>
-      <hr />
+      <hr/>
       <h2>商品介绍</h2>
       <p>介绍</p>
     </div>
     <div *ngSwitchCase="'comment'">
-      <p>评论</p>
+      <ion-grid class="comment" no-padding *ngFor="let comment of commentList">
+        <ion-row class="comment-title">
+          <ion-col>
+            <p class="user-name">
+              <ion-icon name="person"></ion-icon>
+              {{ comment.userName }}
+            </p>
+          </ion-col>
+          <ion-col>
+            <p class="date">{{ comment.createDate | date: "yyyy/MM/dd" }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="comment-score">
+          <ion-col>
+            <star-bar [setScore]="comment.score"></star-bar>
+          </ion-col>
+        </ion-row>
+        <ion-row class="comment-content">
+          <ion-col>
+            <p>{{ comment.content }}</p>
+          </ion-col>
+        </ion-row>
+        <ion-row class="comment-footer">
+          <ion-col>
+            <p>{{ comment.skuInfo }}</p>
+          </ion-col>
+          <ion-col>
+            <div class="favorite">
+              <ion-icon name="heart-outline"></ion-icon>
+              <span>{{ comment.favorite }}</span></div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <br>
     </div>
   </div>
   <div class="tools">
     <ion-grid no-padding>
       <ion-row>
-        <ion-col class="collect">
-          <ion-icon name="star-outline"></ion-icon>
+        <ion-col class="collect" (click)="collectClick()">
+          <ion-icon [name]="productInfo.collect ? 'star':'star-outline'"></ion-icon>
           <p>收藏</p>
         </ion-col>
-        <ion-col class="collect">
+        <ion-col (click)="gotoCart()" class="collect">
           <ion-icon name="cart-outline"></ion-icon>
           <p>购物车</p>
         </ion-col>
