@@ -20,6 +20,7 @@ import {SystemPage} from "../pages/system/system";
 import {PopOverComponent} from "../components/pop-over/pop-over";
 import {AttrModalComponent} from "../components/attr-modal/attr-modal";
 import {StarBarComponent} from "../components/star-bar/star-bar";
+import {OrderDetailPage} from "../pages/order/order-detail";
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import {StarBarComponent} from "../components/star-bar/star-bar";
     UserInfoPage,
     ChangePasswordPage,
     SystemPage,
+    OrderDetailPage,
     HeaderComponent,
     FooterComponent,
     PricerComponent,
@@ -60,7 +62,8 @@ import {StarBarComponent} from "../components/star-bar/star-bar";
         { component: LoginPage, name: 'login', segment: 'login' },
         { component: UserInfoPage, name: 'userInfo', segment: 'userInfo' },
         { component: ChangePasswordPage, name: 'changePassword', segment: 'changePassword' },
-        { component: SystemPage, name: 'system', segment: 'system' }
+        { component: SystemPage, name: 'system', segment: 'system' },
+        { component: OrderDetailPage, name: 'orderDetail', segment: 'orderDetail' }
       ]
     }),
     FormsModule
@@ -80,6 +83,7 @@ import {StarBarComponent} from "../components/star-bar/star-bar";
     UserInfoPage,
     ChangePasswordPage,
     SystemPage,
+    OrderDetailPage,
     HeaderComponent,
     FooterComponent,
     PricerComponent,

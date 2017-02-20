@@ -4,7 +4,7 @@
     <ion-title>订单列表</ion-title>
   </ion-navbar>
   <ion-toolbar class="order-ctrl">
-    <ion-segment [(ngModel)]="orderType">
+    <ion-segment [(ngModel)]="orderTypeStr">
       <ion-segment-button value="paddingPay">待付款</ion-segment-button>
       <ion-segment-button value="paddingReceived">待收货</ion-segment-button>
       <ion-segment-button value="paddingComment">待评价</ion-segment-button>
@@ -20,12 +20,12 @@
         <ion-col>
           <p>{{ order.createDate | date: 'yyyy/MM/dd' }}</p>
         </ion-col>
-        <ion-col>
+        <ion-col width-10 (click)="deleteOrder()">
           <ion-icon name="trash-outline"></ion-icon>
         </ion-col>
       </ion-row>
       <ion-scroll scrollX="true">
-        <ion-row class="order-img-list">
+        <ion-row class="order-img-list" (click)="gotoDetail()">
           <ion-col width-20 no-padding *ngFor="let img of order.productImgList">
             <img [src]="img" alt="">
           </ion-col>
@@ -38,7 +38,12 @@
       </ion-row>
       <ion-row class="order-tools">
         <ion-col>
-          <p><button>付款</button><button>确认收货</button><button>评价</button><button class="normal">再次购买</button></p>
+          <p>
+            <button *ngIf="order.orderType == orderType.paddingPay">付款</button>
+            <button *ngIf="order.orderType == orderType.paddingReceived">确认收货</button>
+            <button *ngIf="order.orderType == orderType.paddingComment">评价</button>
+            <button *ngIf="order.orderType != orderType.paddingPay" class="normal">再次购买</button>
+          </p>
         </ion-col>
       </ion-row>
     </ion-grid>

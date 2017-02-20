@@ -28,9 +28,11 @@ page-order {
   ion-scroll {
     width: 100%;
     height: 70px;
+    border-bottom: 1px solid $light;
   }
 
   .order-img-list {
+
     img {
       display: inline-block;
       height: 60px;
@@ -39,12 +41,15 @@ page-order {
       margin: 5px;
     }
   }
+
   .order-info {
     text-align: right;
+    border-bottom: 1px solid $light;
     span{
       color: $danger;
     }
   }
+
   .order-tools {
     text-align: right;
     button{
