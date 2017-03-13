@@ -1,3 +1,41 @@
 page-order-detail{
+  ion-row{
+    padding: 5px 10px;
+  }
+  ion-col{
+    padding: 0;
+  }
+  p{
+    margin: 0;
+  }
+  %order{
+    margin: 10px 0;
+    border-top: 1px solid $light;
+    border-bottom: 1px solid $light;
+    box-shadow: 1px 1px 5px $light;
+    padding: 10px 0;
+  }
+  .order-title{
+    @extend %order;
+  }
 
+  .order-address{
+    @extend %order;
+  }
+
+  .order-product-list{
+    @extend %order;
+    ion-row{
+      border-bottom: 1px solid $light;
+      &:last-child{
+        border-bottom: none;
+      }
+    }
+  }
+
+  .order-info{
+    @extend %order;
+    padding: 15px 15px;
+    text-align: right;
+  }
 }

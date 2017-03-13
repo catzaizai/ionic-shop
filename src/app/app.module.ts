@@ -21,6 +21,7 @@ import {PopOverComponent} from "../components/pop-over/pop-over";
 import {AttrModalComponent} from "../components/attr-modal/attr-modal";
 import {StarBarComponent} from "../components/star-bar/star-bar";
 import {OrderDetailPage} from "../pages/order/order-detail";
+import {OrderType} from "../pipes/order-type";
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {OrderDetailPage} from "../pages/order/order-detail";
     PricerComponent,
     PopOverComponent,
     AttrModalComponent,
-    StarBarComponent
+    StarBarComponent,
+    OrderType
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -91,6 +93,6 @@ import {OrderDetailPage} from "../pages/order/order-detail";
     AttrModalComponent,
     StarBarComponent
   ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
 export class AppModule {}

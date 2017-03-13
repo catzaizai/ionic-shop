@@ -8,21 +8,50 @@
     <ion-grid no-padding>
       <ion-row>
         <ion-col><p>订单编号：{{ orderInfo.orderNo }}</p></ion-col>
-        <ion-col><p><span>{{ orderInfo.orderType }}</span></p></ion-col>
+        <ion-col><p class="pull-right">{{ orderInfo.orderType | orderType }}</p></ion-col>
       </ion-row>
     </ion-grid>
   </div>
   <div class="order-address">
-    <ion-grid>
+    <ion-grid no-padding>
       <ion-row>
-        <ion-col> </ion-col>
+        <ion-col>
+          {{ orderInfo.address.contact }}
+        </ion-col>
+        <ion-col>
+          {{ orderInfo.address.phoneNo }}
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          {{ orderInfo.address.addressInfo }}
+        </ion-col>
       </ion-row>
     </ion-grid>
   </div>
   <div class="order-product-list">
-
+    <ion-grid>
+      <ion-row *ngFor="let product of orderInfo.productList">
+        <ion-col width-33>
+          <img [src]="product.src" alt="">
+        </ion-col>
+        <ion-col>
+          <p>{{ product.title }}</p>
+          <p class="price">{{ product.price }}</p>
+          <p class="num">数量：<span>{{ product.num }}</span> <span class="pull-right">{{ product.skuInfo }}</span></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
   <div class="order-info">
-
+    <p class="total-amount">总额：<span>{{ orderInfo.totalAmount }}</span></p>
+    <p class="freight">运费: + {{ orderInfo.freight.toFixed(2) }}</p>
+    <p class="real-pay">实付：<span>{{ orderInfo.realPay }}</span></p>
+  </div>
+  <div class="order-tool">
+    <button>付款</button>
+    <button>确认收货</button>
+    <button>评价</button>
+    <button>再次购买</button>
   </div>
 </ion-content>

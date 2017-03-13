@@ -19,10 +19,28 @@ export class OrderDetailPage{
         addressInfo: '北京海淀区西街43号'
       },
       productList: [
-        {  }
+        {
+          title: '华为荣耀WIFI穿墙宝 电力猫',
+          summary: '超强电力宝，强力穿墙，即插即用',
+          score: 4,
+          price: 224.00,
+          src: '../../assets/product.jpg',
+          skuInfo: '黑色 单个',
+          num: 3
+        },
+        {
+          title: '华为荣耀WIFI穿墙宝 电力猫',
+          summary: '超强电力宝，强力穿墙，即插即用',
+          score: 4,
+          price: 224.00,
+          src: '../../assets/product.jpg',
+          skuInfo: '黑色 单个',
+          num: 3
+        }
       ],
       totalAmount: 224.00,
-      realPay: 224.00
+      realPay: 224.00,
+      freight: 0.00
     }
   }
 }
