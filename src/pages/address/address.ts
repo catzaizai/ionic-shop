@@ -13,10 +13,20 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class AddressPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  addressList: any;
+  currentDefaultAddress: any;
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AddressPage');
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.addressList = [];
+    for(let i=0;i<5;i++){
+      this.addressList.push({
+        name: '张三',
+        phone: '13882923495',
+        address: '四川省成都市武侯区贵溪街道剑南大道南段58号',
+        isDefault: false,
+      });
+    }
+    this.addressList[0].isDefault = true;
+    this.currentDefaultAddress = this.addressList[0];
   }
-
 }

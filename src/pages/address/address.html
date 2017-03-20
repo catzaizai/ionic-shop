@@ -14,5 +14,23 @@
 
 
 <ion-content padding>
-
+  <div class="address-info">
+    <ion-grid *ngFor="let address of addressList">
+      <ion-row>
+        <ion-col><p>{{address.name}}</p></ion-col>
+        <ion-col><p>{{address.phone}}</p></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><p>{{address.address}}</p></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <p><checkbox [(checked)]="address.isDefault"></checkbox><span>默认地址</span></p>
+        </ion-col>
+        <ion-col>
+          <ion-icon name=""></ion-icon>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

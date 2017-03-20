@@ -1,5 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import {IonicApp, IonicModule, IonicErrorHandler} from 'ionic-angular';
 import { MyApp } from './app.component';
 import { MePage } from '../pages/me/me';
 import { CategoryPage } from '../pages/category/category';
@@ -22,6 +22,7 @@ import {AttrModalComponent} from "../components/attr-modal/attr-modal";
 import {StarBarComponent} from "../components/star-bar/star-bar";
 import {OrderDetailPage} from "../pages/order/order-detail";
 import {OrderType} from "../pipes/order-type";
+import {CheckboxComponent} from "../components/checkbox/checkbox";
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import {OrderType} from "../pipes/order-type";
     PopOverComponent,
     AttrModalComponent,
     StarBarComponent,
+    CheckboxComponent,
     OrderType
   ],
   imports: [
@@ -91,7 +93,8 @@ import {OrderType} from "../pipes/order-type";
     PricerComponent,
     PopOverComponent,
     AttrModalComponent,
-    StarBarComponent
+    StarBarComponent,
+    CheckboxComponent
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
