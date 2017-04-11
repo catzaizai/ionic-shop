@@ -25,7 +25,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <p><checkbox [(checked)]="address.isDefault"></checkbox><span>默认地址</span></p>
+          <p class="default-address"><ion-icon [name]="address.isDefault ? 'md-checkbox' : 'md-square-outline'"></ion-icon><span>默认地址</span></p>
         </ion-col>
         <ion-col>
           <ion-icon name=""></ion-icon>

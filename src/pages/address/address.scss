@@ -1,3 +1,11 @@
 page-address {
-
+  .address-info{
+    ion-grid{
+      ion-row{
+        p{
+          margin: 0;
+        }
+      }
+    }
+  }
 }
